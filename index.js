@@ -1,38 +1,39 @@
-// const dayjs = require('dayjs');
-const inquirer = require('inquirer');
 
-inquirer.prompt([
-  {
-    name: 'num1',
-    message: 'Please enter your first number.',
-    type: 'number'
-  },
-  {
-    name: 'num2',
-    message: 'Please enter your second number.',
-    type: 'number'
-  },
-  {
-    name: 'operator',
-    message: 'Please choose the operation',
-    type: 'list',
-    choices: ['Add', 'Subtract', 'Multiply', 'Divide']
+// const fruits = ['apple', 'orange', 'grape'];
+
+// const moreFruits = ['kiwi', 'banana', 'pear'];
+
+// const combined = ['strawberry', ...fruits, 'peach', 'tomato', ...moreFruits, 'mango'];
+
+// // console.log(combined);
+
+// function someFunc(...args) {
+//   console.log(args);
+// }
+
+// someFunc(5, 'something', 'another', 10, 'one more', 15);
+
+const data = {
+  name: 'JD',
+  age: 43,
+  details: {
+    location: 'GA',
+    weather: 'temperate',
+    hot: 'yes'
   }
-]).then((answerObj) => {
-  switch (answerObj.operator) {
-    case 'Add':
-      console.log(answerObj.num1 + answerObj.num2);
-      break;
-    case 'Subtract':
-      console.log(answerObj.num1 - answerObj.num2);
-      break;
-    case 'Divide':
-      console.log(answerObj.num1 / answerObj.num2);
-      break;
-    case 'Multiply':
-      console.log(answerObj.num1 * answerObj.num2);
-      break;
-  }
+};
+
+const { name, age } = { ...data };
+
+console.log(age);
 
 
-});
+
+
+
+
+// function someFunc({ age: userAge, details: { location: userLocation } }, str) {
+//   console.log(userLocation);
+// }
+
+// someFunc({ name: 'Bob', age: 99, details: { location: 'nursing home' } }, 'another arg');

@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.11.8",
-    "inquirer": "^8.2.5"
+    "dayjs": "^1.11.8"
   }
 }
